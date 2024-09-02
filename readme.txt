@@ -8,4 +8,4 @@ F1 팬들에게 직접 타이어 전략을 짜보고 계산하며, f1경기를 �
 개발내용:
 - 트랙을 선택 한 후 피트스탑 횃수를 정하여 바꿀 타이어를 정합니다.
 
-깃헙 링크:https://github.com/Daka48/f1_tire_strategy
+깃헙 링크:https://github.com/Daka48/F1-tires
