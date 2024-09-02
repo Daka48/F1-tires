@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 랩타임 계산기</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 그래프 시각화를 위한 Chart.js 추가 -->
+</head>
+<body>
+    <div class="container">
+        <h1>F1 랩타임 계산기</h1>
+        <hr>
+        <p>이 정보는 정확하지 않으며 평균적인 값을 기반으로 계산합니다. <br>실제 경기에서는 도로의 상태와 자동차의 성능에 따라 결과가 매우 다릅니다.</p>
+
+        <div class="input-group">
+            <label for="trackSelect">트랙 선택:</label>
+            <select id="trackSelect">
+                <option value="">트랙을 선택하세요</option>
+                <option value="monaco">모나코</option>
+                <option value="silverstone">실버스톤</option>
+            </select>
+        </div>
+
+        <div id="tireStrategy">
+            <h2>타이어 전략</h2>
+            <div class="strategy-row">
+                <label for="startLap">시작 랩:</label>
+                <input type="number" class="startLap" value="1" min="1">
+                <label for="endLap">종료 랩:</label>
+                <input type="number" class="endLap" value="0" min="1">
+                <select class="tireType">
+                    <option value="soft">소프트</option>
+                    <option value="medium">미디움</option>
+                    <option value="hard">하드</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="addStrategy">+ 전략 추가</button>
+        <button id="calculateButton">랩타임 계산하기</button>
+
+        <div id="result">
+            <h2>계산 결과</h2>
+            <div id="analysis"></div>
+            이 계산 결과에는 피트스탑시간이 추가되어있지 않습니다(피트스탑 횟수 * 20s를 더해주세요)
+        </div>
+
+        <div id="graphContainer">
+            <canvas id="lapTimeChart"></canvas> 
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
